@@ -1,0 +1,8 @@
+{% extends 'app_users/base.html' %}
+{% block body %}
+<div class="container" style="text-align: center;">
+    <h4 style="color: blue;">You have been registered successfully.</h4>
+    <br>
+    <a href="{% url 'login' %}"><button type="submit" class="button">Login</button></a>
+</div>
+{% endblock %}

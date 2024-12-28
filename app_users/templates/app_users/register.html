@@ -1,0 +1,26 @@
+{% extends 'app_users/base.html' %}
+{% block body %}
+<div class="container py-5" style="text-align: center;">
+    <h4 style="margin-bottom: -40px;"><b>Register</b></h4>
+    <div class="flex items-center justify-center">
+        <form method="POST" class="bg-white shadow-md m-10 w-1/3 rounded px-8 pt-6 pb-8 mb-4">
+            {% csrf_token %}
+            <div class="mb-2">
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Username: </label>
+                <span>{{ user_form.username }}</span>
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Email: </label>
+                <span>{{ user_form.email }}</span>
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Firstname: </label>
+                <span>{{ user_form.first_name }}</span>
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Lastname: </label>
+                <span>{{ user_form.last_name }}</span>
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Password: </label>
+                <span>{{ user_form.password }}</span>
+                <label style="text-align: center;" class="block text-gray-700 text-sm font-bold mb-2" for="username">Confirm Password: </label>
+                <span>{{ user_form.password2 }}</span>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
